@@ -1,14 +1,33 @@
 {
   "configurations": [
     {
+      "command": "npm run dev",
+      "name": "Client",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/client",
+    },
+    {
       "type": "java",
-      "name": "Spring Boot-PlaygroundApplication<server>",
+      "name": "Server",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "mainClass": "it.gis3d.playground.PlaygroundApplication",
       "projectName": "server",
-      "args": "",
+      "args": "--spring.profiles.active=local",
       "envFile": "${workspaceFolder}/.env"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "ALL",
+      "configurations": ["Client", "Server"],
+      "stopAll": true,
+      "presentation": {
+        "hidden": false,
+        "group": "",
+        "order": 1
+      }
     }
   ]
 }
