@@ -1,0 +1,24 @@
+services:
+  devcontainer:
+    image: mcr.microsoft.com/devcontainers/base:bookworm
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    volumes:
+      - ../..:/workspaces:cached
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    shm_size: 128mb
+    ports:
+      - 45432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 8090:8080

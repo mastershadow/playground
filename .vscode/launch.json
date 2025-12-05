@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-PlaygroundApplication<server>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "it.gis3d.playground.PlaygroundApplication",
+      "projectName": "server",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
