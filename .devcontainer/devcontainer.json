@@ -22,11 +22,7 @@
 			"extensions": [
 				"vmware.vscode-boot-dev-pack",
 				"eamodio.gitlens"
-			],
-			"settings": {
-        "remote.autoForwardPorts": false
-			}
+			]
 		}
-	},
-	"forwardPorts": [ 8080, 3000, 8090 ]
+	}
 }

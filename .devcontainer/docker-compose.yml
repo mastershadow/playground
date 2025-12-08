@@ -3,7 +3,8 @@ services:
     image: mcr.microsoft.com/devcontainers/base:bookworm
     restart: unless-stopped
     ports:
-      - 8080:80
+      - 8080:8080
+      - 3000:3000
     command: /bin/sh -c "while sleep 1000; do :; done"
     volumes:
       - ../..:/workspaces:cached
